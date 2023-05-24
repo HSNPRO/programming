@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Menembak Hati</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: red;
+      background-image: url('heart.png');
+      background-repeat: repeat;
+      background-position: center;
+      background-size: 150px;
+    }
+    
+    h1 {
+      color: white;
+      margin-top: 50px;
+    }
+    
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      color: white;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    #love-image {
+      width: 300px;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 30px;
+    }
+    
+    #love-button {
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      font-size: 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    
+    #love-button:hover {
+      background-color: darkred;
+    }
+    
+    #result {
+      font-size: 24px;
+      margin-top: 20px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Menembak Hati</h1>
+  <img src="love.jpg" alt="Love" id="love-image">
+  <p>Sudah lama aku merasakan perasaan yang istimewa saat bersamamu. Engkau membuatku tersenyum, berdebar-debar, dan bahagia. Hari ini, aku ingin mengungkapkan perasaanku yang terdalam kepadamu.</p>
+  <p>Ayah berkata, katakanlah apa yang ada di hatimu. Jadi, dengan seluruh keberanian dan ketulusan, aku ingin bertanya:</p>
+  <button id="love-button">Apakah kamu mau menjadi kekasihku?</button>
+  <p id="result"></p>
+  
+  <script>
+    var loveButton = document.getElementById('love-button');
+    var resultText = document.getElementById('result');
+    
+    loveButton.addEventListener('click', function() {
+      var answer = confirm('Apakah kamu mau menjadi kekasihku?');
+      
+      if (answer) {
+        resultText.textContent = 'Iya! Aku mau!';
+      } else {
+        resultText.textContent = 'Maaf, aku belum siap.';
+      }
+    });
+  </script>
+</body>
+</html>
+
